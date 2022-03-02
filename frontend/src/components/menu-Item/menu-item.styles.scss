@@ -1,0 +1,31 @@
+.menu-item{
+    margin-top:10px;
+    margin-bottom:10px;
+    padding: 12px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 2.3fr 1fr 0.8fr;
+    border-radius: 10px;
+    justify-content: center;
+    box-shadow: -1px 10px 15px 2px rgba(2,6,8,0.64);
+    &:hover{
+        box-shadow: 0px 0px 30px 2px rgba(2,6,8,0.64);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .content-container {
+        text-align: center;
+    }
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .image {
+        width: 100%;
+        height: 95%;
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 5px;
+    }
+}

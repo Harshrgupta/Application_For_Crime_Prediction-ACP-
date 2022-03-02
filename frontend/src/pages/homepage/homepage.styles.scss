@@ -1,0 +1,20 @@
+.section-container {
+    height: auto;
+    margin: 0px;
+    .sections {
+        &:nth-child(2n+1){
+            background-color: azure;
+        }
+        height: 100vh;
+        padding:15px;
+        .section-heading {
+            font-size: larger;
+            font-weight: 700;
+            text-decoration: solid;
+            text-align: center;
+        }
+    }
+    #ipcs,#about-us {
+        height: auto;
+    }
+}
