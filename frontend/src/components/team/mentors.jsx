@@ -20,7 +20,7 @@ const MentorTeamPage = () => {
                         <h4 className="font-weight-bold dark-grey-text my-4">
                             Mr. Mukesh Sakle
                         </h4>
-                        <h6 className="text-uppercase grey-text mb-3">Assistant Professor</h6>
+                        {/* <h6 className="text-uppercase grey-text mb-3">Assistant Professor</h6> */}
 
                     </MDBCol>
 
@@ -33,7 +33,7 @@ const MentorTeamPage = () => {
                         <h4 className="font-weight-bold dark-grey-text my-4">
                             Dr. Lalit Purohit
                         </h4>
-                        <h6 className="text-uppercase grey-text mb-3">Assistant Professor</h6>
+                        {/* <h6 className="text-uppercase grey-text mb-3">Assistant Professor</h6>s */}
 
                     </MDBCol>
                     {/* <MDBCol md="4" className="mb-md-0 mb-5">
