@@ -1,11 +1,12 @@
 import React from "react";
 import './search-box.css';
 import axios from 'axios';
+const ipc = require('../../constants/ipc.json');
 
 class SearchBox extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { value: '', output: null };
+        this.state = { value: '', output: null, sectionTitle: null };
     }
     handleChange = (event) => {
         this.setState({ value: event.target.value });
@@ -14,8 +15,9 @@ class SearchBox extends React.Component {
         event.preventDefault();
         if (this.state.value) {
             axios.get('http://localhost:3001/get-result', { params: this.state.value }).then((value) => {
-                console.log(value)
-                this.setState({ output: value.data })
+                // console.log(value);
+                let val = ipc.filter((item) => (item.Section === value.data || item.Section === value.data.toString()))[0]
+                this.setState({ output: value.data, sectionTitle: val.section_title })
             })
         } else {
 
@@ -30,7 +32,12 @@ class SearchBox extends React.Component {
                 <input type="text" className="searchField" placeholder="Enter FIR" onChange={this.handleChange}></input>
                 <button className="btn" onClick={this.onClickHandler}>Predict</button>
             </div>
-            {this.state.output ? <div className="output">output:{this.state.output}</div> : null}
+            {this.state.output ?
+                <div className="output">
+                    <div>IPC - {this.state.output}</div>
+                    <div>{this.state.sectionTitle}</div>
+                </div> : null
+            }
         </div>
     }
 }

@@ -8,8 +8,6 @@ import keras.backend.tensorflow_backend as tb
 tb._SYMBOLIC_SCOPE.value = True
 from flask_cors import CORS 
 
-
-
 ONE_LABEL_COL = "child_alone"
 
 app = Flask(__name__)
@@ -47,7 +45,6 @@ def getResults(textToProcess):
     num_words = None
     if not num_words:
             num_words = max([max(x1) for x1 in inp])
-            
     oov_char = 2
     skip_top = 0
     if oov_char is not None:
@@ -55,7 +52,7 @@ def getResults(textToProcess):
     else:
             inp = [[w for w in x1 if (skip_top <= w < num_words)] for x1 in inp]
     inp=sequence.pad_sequences(inp, maxlen=201)
-    print('ipc you get from text'+str(labelencoder.classes_[modelrr.predict(inp).argmax(axis=1)]))
+    print('ipc you get from text '+str(labelencoder.classes_[modelrr.predict(inp).argmax(axis=1)]))
     return labelencoder.classes_[modelrr.predict(inp).argmax(axis=1)]
 
 @app.route('/')

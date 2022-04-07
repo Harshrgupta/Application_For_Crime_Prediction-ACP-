@@ -10,19 +10,31 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+
     width: 90%;
+    height: 90%;
 
 }
 
 .box {
     text-align: center;
     width: 108%;
-    padding-top: 20%;
-    padding-bottom: 25%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .output {
-    background-color: white;
+    background-color: violet;
+    color: white;
+    width: auto;
+    font-size: x-large;
+    font-weight: 600;
+    text-align: center;
+    height: auto;
+    align-content: center;
+    min-width: 200px;
+    border-radius: 5px;
+    /* opacity: 0.5; */
 }
 
 .searchField {
