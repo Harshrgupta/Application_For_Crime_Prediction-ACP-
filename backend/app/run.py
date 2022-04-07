@@ -51,7 +51,7 @@ def getResults(textToProcess):
             inp = [[w if (skip_top <= w < num_words) else oov_char for w in x1] for x1 in inp]
     else:
             inp = [[w for w in x1 if (skip_top <= w < num_words)] for x1 in inp]
-    inp=sequence.pad_sequences(inp, maxlen=201)
+    inp=sequence.pad_sequences(inp, maxlen=151)
     print('ipc you get from text '+str(labelencoder.classes_[modelrr.predict(inp).argmax(axis=1)]))
     return labelencoder.classes_[modelrr.predict(inp).argmax(axis=1)]
 
