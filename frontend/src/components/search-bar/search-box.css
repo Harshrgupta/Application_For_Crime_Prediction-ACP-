@@ -1,20 +1,43 @@
-
 .container {
- 
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpjWQa9KILupNoKbRKSUodxHUhliEid1-sZw&usqp=CAU);
-   /* Do not repeat the image */
-   background-position: center; /* Center the image */
-   /* Do not repeat the image */
-  ;
- 
+
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpjWQa9KILupNoKbRKSUodxHUhliEid1-sZw&usqp=CAU);
+    /* Do not repeat the image */
+    background-position: center;
+    /* Center the image */
+    /* Do not repeat the image */
+    ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    width: 90%;
+    height: 90%;
+
 }
- .box{
-     text-align: center;
-     width: 108%;
-     padding-top: 20%;
-     padding-bottom: 25%;
- }
-.searchField{
+
+.box {
+    text-align: center;
+    width: 108%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.output {
+    background-color: violet;
+    color: white;
+    width: auto;
+    font-size: x-large;
+    font-weight: 600;
+    text-align: center;
+    height: auto;
+    align-content: center;
+    min-width: 200px;
+    border-radius: 5px;
+    /* opacity: 0.5; */
+}
+
+.searchField {
     width: 40%;
     height: 50px;
     background: white;
@@ -24,10 +47,11 @@
     margin-left: auto;
     padding: 0 8px;
 }
-.btn{
-    width:10%;
+
+.btn {
+    width: 10%;
     margin-left: 10px;
-    height:50px;
+    height: 50px;
     background: rgb(98, 171, 240);
     cursor: pointer;
     font-size: 16px;
