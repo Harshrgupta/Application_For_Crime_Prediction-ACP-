@@ -30,13 +30,13 @@ def getModelVar():
 def getResults(textToProcess): 
     tb._SYMBOLIC_SCOPE.value = True
     inp = [textToProcess]
-    #accussed raped a girl for 7 days
-    #accussed murdered a man
     #accussed committed theft of gold ornaments
+    #minor girl is raped by accused
+    #Exchange of words between accused and deceased followed by infliction of single injury leading to death
     print(inp)
     inp = tokenz.texts_to_sequences(inp)
     inp = sequence.pad_sequences(inp, maxlen=200)
-    index_from=3
+    index_from=4
     start_char = 1
     if start_char is not None:
             inp = [[start_char] + [w + index_from for w in x1] for x1 in inp]
@@ -52,6 +52,7 @@ def getResults(textToProcess):
     else:
             inp = [[w for w in x1 if (skip_top <= w < num_words)] for x1 in inp]
     inp=sequence.pad_sequences(inp, maxlen=151)
+    print(modelrr.predict(inp))
     print('ipc you get from text '+str(labelencoder.classes_[modelrr.predict(inp).argmax(axis=1)]))
     return labelencoder.classes_[modelrr.predict(inp).argmax(axis=1)]
 
